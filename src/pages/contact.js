@@ -150,6 +150,7 @@ class ContactPage extends React.Component {
                         <Title>Get in touch <span role="img" aria-label="emoji">💌</span></Title>
                         <Description>Use the form below, or hit us up at <b>awake.together.mtp@gmail.com</b></Description>
                         <Form name="contact" method="POST" data-netlify="true">
+                            <input type="hidden" name="form-name" value="contact" />
                             <p>
                                 <label htmlFor="input-name">Name</label>
                                 <Input id="input-name" value={this.state.name} onChange={this.handleInputChange} type="text" name="name"/>
