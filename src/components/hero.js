@@ -43,7 +43,7 @@ const Leader = styled.h1`
 `
 
 const Hero = () => (
-    <Container>
+    <Container data-cy="hero">
         <Leader>Let’s correctly detect sleep disorders.</Leader>
         <Waves src={WavesSource} alt="Waves"/>
     </Container>

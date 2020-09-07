@@ -56,7 +56,7 @@ const AwakeLink = styled(Link)`
 `
 
 const Header = () => (
-    <StickyFullWidth >
+    <StickyFullWidth data-cy="header">
     <Container>
         <Link to="/">
             <img src={LogoSource} style={{maxHeight: '60px'}} alt="Awake Logo"/>

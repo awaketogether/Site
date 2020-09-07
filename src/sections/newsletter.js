@@ -94,7 +94,7 @@ class Newsletter extends React.Component {
         const wasSent = this.state.result.length > 0
 
         return (
-            <Section>
+            <Section id="newsletter">
                 <NewsletterContainter className={wasSent ? "done" : ""}>
                     <Title>Join our newsletter <span role="img" aria-label="emoji">📮</span></Title>
                     <Description>Receive all the latest <b>Awake</b> news.</Description>

@@ -146,7 +146,7 @@ class ContactPage extends React.Component {
             <Layout>
                 <SEO title="Contact" />
                 <Container>
-                    <Section>
+                    <Section id="contact">
                         <Title>Get in touch <span role="img" aria-label="emoji">💌</span></Title>
                         <Description>Use the form below, or hit us up at <b>awake.together.mtp@gmail.com</b></Description>
                         <Form name="contact" method="POST" data-netlify="true">
