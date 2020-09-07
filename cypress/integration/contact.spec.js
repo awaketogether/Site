@@ -51,15 +51,6 @@ context('Contact Page', () => {
             section.get('textarea[name="message"]')
                 .type('This is my cypress E2E test!')
                 .should('have.value', 'This is my cypress E2E test!');
-
-            cy.server();
-            cy.route({
-                url: '/',
-                method: 'POST',
-                response: { status: 'Saved', code: 201 }
-            });
-
-            cy.get('form[name="contact"]').submit();
         });
     });
 });
