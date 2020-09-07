@@ -24,7 +24,10 @@
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
-    "prettier": "2.0.5"
+    "cypress": "^5.1.0",
+    "netlify-plugin-cypress": "^1.4.1",
+    "prettier": "2.0.5",
+    "start-server-and-test": "^1.11.3"
   },
   "keywords": [
     "gatsby"
@@ -36,7 +39,10 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test:e2e:ci": "start-server-and-test dev http://localhost:8000 cypress:run"
   },
   "repository": {
     "type": "git",

@@ -68,3 +68,7 @@ To verify the integrity of new source code, before being able to merge, every ne
 **Delivery**
 
 When updates are detected on the **master** branch, netlify will rebuild and serve a new version of the site.
+
+**E2E Testing**
+
+End to End testing is done with Cypress, all the tests are in the /cypress/ folder.
