@@ -15,10 +15,6 @@ context('Contact Page', () => {
             cy.contains('privacy');
         });
 
-        it('Should contain a newsletter form', () => {
-            cy.get('#newsletter');
-        });
-
         it('Should contain a contact form', () => {
             cy.get('#contact');
         });
