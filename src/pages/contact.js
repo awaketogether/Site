@@ -3,7 +3,6 @@ import Layout from "../components/layout"
 import styled from "styled-components"
 import SEO from "../components/seo"
 import backgroundSource from "../images/bg-green.svg"
-import Newsletter from "../sections/newsletter"
 
 const Container = styled.section`
     width: 100%;
@@ -166,7 +165,6 @@ class ContactPage extends React.Component {
                             <Button type="submit" disabled={!isEnabled}>Send</Button>
                         </Form>
                     </Section>
-                <Newsletter/>
                 </Container>
             </Layout>
         )
