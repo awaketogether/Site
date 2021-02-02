@@ -31,9 +31,9 @@ context('Home', () => {
             cy.get('#team').contains('Michele');
             cy.get('#team').contains('Simon');
             cy.get('#team').contains('Leos');
-            cy.get('#team').contains('Alexandre');
-            cy.get('#team').contains('Raphael');
             cy.get('#team').contains('Mathis');
+            cy.get('#team').contains('Matthieu');
+            cy.get('#team').contains('Xamo');
         });
 
         it('Should contain the FAQ section', () => {

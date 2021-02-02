@@ -3,10 +3,11 @@ import styled from "styled-components"
 
 import PictoGithub from "../images/picto-github.svg"
 import PictoTwitter from "../images/picto-twitter.svg"
+import PictoMedium from "../images/picto-medium.svg"
 
 import ProfilePicMichele from "../images/team/profile-michele.png"
-import ProfilePicRaph from "../images/team/profile-raph.png"
-import ProfilePicFinne from "../images/team/profile-finne.png"
+import ProfilePicXamo from "../images/team/profile-xamo.png"
+import ProfilePicMatthieu from "../images/team/profile-matthieu.png"
 import ProfilePicSimon from "../images/team/profile-simon.png"
 import ProfilePicLeos from "../images/team/profile-leos.png"
 import ProfilePicMathis from "../images/team/profile-mathis.png"
@@ -93,7 +94,7 @@ const CardLinks = styled.div`
     a {
         opacity: 0.74;
     }
-    a:first-of-type {
+    a:not(:last-of-type) {
         margin-right: 0.15em;
     }
     a:hover {
@@ -101,7 +102,7 @@ const CardLinks = styled.div`
     }
 `
 
-const Profile = ({name, job, github, twitter, pic}) => (
+const Profile = ({name, job, github, twitter, medium, pic}) => (
     <ProfileCard>
         <CardHeader>
             <img src={pic} alt="Profile"/>
@@ -117,6 +118,12 @@ const Profile = ({name, job, github, twitter, pic}) => (
                         twitter &&
                         <a target="_blank" rel="noopener noreferrer" href={'https://twitter.com/' + twitter}>
                             <img src={PictoTwitter} alt="Twitter"/>
+                        </a>
+                    }
+                    {
+                        medium &&
+                        <a target="_blank" rel="noopener noreferrer" href={'https://medium.com/@' + medium}>
+                            <img src={PictoMedium} alt="Medium"/>
                         </a>
                     }
                 </CardLinks>
@@ -139,12 +146,15 @@ const Team = () => (
                         job: "Lead Software Engineer",
                         github: "leodau",
                         twitter: "Michele_Leo",
+                        medium: "codingleo",
                         pic: ProfilePicMichele
                     },
                     {
                         name: "Simon Provost",
                         job: "Software Engineer",
                         github: "simonprovost",
+                        medium: "simon1-provost",
+                        twitter: "SimonProvost_",
                         pic: ProfilePicSimon
                     },
                     {
@@ -154,25 +164,25 @@ const Team = () => (
                         pic: ProfilePicLeos
                     },
                     {
-                        name: "Alexandre Finne",
-                        job: "Software Engineer",
-                        github: "alexandrefinne",
-                        pic: ProfilePicFinne
-                    },
-                    {
-                        name: "Raphael Dakiche",
-                        job: "Software Engineer",
-                        github: "raphaeldk",
-                        pic: ProfilePicRaph
-                    },
-                    {
                         name: "Mathis Chaptinel",
                         job: "Software Engineer",
                         github: "kagemegami",
                         pic: ProfilePicMathis
+                    },
+                    {
+                        name: "Matthieu Sauer",
+                        job: "Software Engineer",
+                        github: "matthieu-sauer",
+                        pic: ProfilePicMatthieu
+                    },
+                    {
+                        name: "Xamo Arvin",
+                        job: "Software Engineer",
+                        github: "vaderxami",
+                        pic: ProfilePicXamo
                     }
-                ].map(({name, job, github, twitter, pic}, key) => (
-                    <Profile key={key} name={name} job={job} github={github} twitter={twitter} pic={pic}/>
+                ].map(({name, job, github, twitter, medium, pic}, key) => (
+                    <Profile key={key} name={name} job={job} github={github} twitter={twitter} medium={medium} pic={pic}/>
                 ))
             }
         </ProfileContainer>
