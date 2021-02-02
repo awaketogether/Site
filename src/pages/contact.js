@@ -115,6 +115,11 @@ const Form = styled.form`
     label {
         width: 20%;
     }
+
+    .g-recaptcha {
+        text-align: center;
+        align-self: center;
+    }
 `
 
 class ContactPage extends React.Component {
@@ -148,7 +153,7 @@ class ContactPage extends React.Component {
                     <Section id="contact">
                         <Title>Get in touch <span role="img" aria-label="emoji">💌</span></Title>
                         <Description>Use the form below, or hit us up at <b>awake.together.mtp@gmail.com</b></Description>
-                        <Form name="contact" method="POST" data-netlify="true">
+                        <Form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
                             <input type="hidden" name="form-name" value="contact" />
                             <p>
                                 <label htmlFor="input-name">Name</label>
@@ -162,6 +167,8 @@ class ContactPage extends React.Component {
                                 <label htmlFor="input-message">Message</label>
                                 <TextArea id="input-message" value={this.state.message} onChange={this.handleInputChange} name="message"/>
                             </p>
+                            <div className="g-recaptcha" data-sitekey="6Lc1Y0caAAAAADE7C5qiAbzzitGW2kBuTRs6OWpF"></div>
+                            <br/>
                             <Button type="submit" disabled={!isEnabled}>Send</Button>
                         </Form>
                     </Section>
