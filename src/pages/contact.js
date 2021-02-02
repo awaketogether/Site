@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import styled from "styled-components"
 import SEO from "../components/seo"
 import backgroundSource from "../images/bg-green.svg"
+import Reaptcha from 'reaptcha';
 
 const Container = styled.section`
     width: 100%;
@@ -129,7 +130,8 @@ class ContactPage extends React.Component {
             name: '',
             email: '',
             message: '',
-            result: ''
+            result: '',
+            verified: false
         }
     }
 
@@ -142,9 +144,15 @@ class ContactPage extends React.Component {
         })
       }
 
+    onVerify = recaptchaResponse => {
+        this.setState({
+            verified: true
+        });
+    };
+
     render() {
-        const { name, email, message } = this.state;
-        const isEnabled = name.length > 3 && email.length > 4 && message.length > 5
+        const { name, email, message, verified } = this.state;
+        const isEnabled = name.length > 3 && email.length > 4 && message.length > 5 && verified
 
         return (
             <Layout>
@@ -167,7 +175,7 @@ class ContactPage extends React.Component {
                                 <label htmlFor="input-message">Message</label>
                                 <TextArea id="input-message" value={this.state.message} onChange={this.handleInputChange} name="message"/>
                             </p>
-                            <div className="g-recaptcha" data-sitekey="6Lc1Y0caAAAAADE7C5qiAbzzitGW2kBuTRs6OWpF"></div>
+                            <Reaptcha sitekey="6Lc1Y0caAAAAADE7C5qiAbzzitGW2kBuTRs6OWpF" onVerify={this.onVerify} />
                             <br/>
                             <Button type="submit" disabled={!isEnabled}>Send</Button>
                         </Form>

@@ -43,13 +43,6 @@ module.exports = {
             endpoint: "https://gmail.us18.list-manage.com/subscribe/post?u=6bf15e3b21a88c01bf8b05379&amp;id=d6ba68f9fe",
             timeout: 3500
         }
-    },
-    {
-      resolve: `gatsby-plugin-recaptcha`,
-      options: {
-         async: false,
-         defer: false
-      },
-   }
+    }
   ],
 }
