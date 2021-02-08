@@ -55,7 +55,7 @@ const Footer = () => (
                 <a target="_blank" rel="noopener noreferrer" href={'https://github.com/awaketogether'}>
                     <img src={PictoGithub} alt="Github"/>
                 </a>
-                <a target="_blank" rel="noopener noreferrer" href={'https://github.com/'}>
+                <a target="_blank" rel="noopener noreferrer" href={'https://www.facebook.com/groups/1707928316004388'}>
                     <img src={PictoFacebook} alt="Facebook"/>
                 </a>
                 <a target="_blank" rel="noopener noreferrer" href={'https://medium.com/awake-together'}>
