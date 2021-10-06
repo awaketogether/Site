@@ -6,7 +6,6 @@ import PictoTwitter from "../images/picto-twitter.svg"
 import PictoMedium from "../images/picto-medium.svg"
 
 import ProfilePicMichele from "../images/team/profile-michele.png"
-import ProfilePicXamo from "../images/team/profile-xamo.png"
 import ProfilePicMatthieu from "../images/team/profile-matthieu.png"
 import ProfilePicSimon from "../images/team/profile-simon.png"
 import ProfilePicLeos from "../images/team/profile-leos.png"
@@ -174,12 +173,6 @@ const Team = () => (
                         job: "Software Engineer",
                         github: "matthieu-sauer",
                         pic: ProfilePicMatthieu
-                    },
-                    {
-                        name: "Xamo Arvin",
-                        job: "Software Engineer",
-                        github: "vaderxami",
-                        pic: ProfilePicXamo
                     }
                 ].map(({name, job, github, twitter, medium, pic}, key) => (
                     <Profile key={key} name={name} job={job} github={github} twitter={twitter} medium={medium} pic={pic}/>
